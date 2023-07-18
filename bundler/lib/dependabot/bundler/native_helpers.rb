@@ -45,6 +45,7 @@ module Dependabot
             function: function,
             args: args,
             env: {
+              "BUNDLE_GEMFILE" => File.join(helpers_path, "Gemfile"),
               # Prevent the GEM_HOME from being set to a folder owned by root
               "GEM_HOME" => File.join(helpers_path, ".bundle")
             }
